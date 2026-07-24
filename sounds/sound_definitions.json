@@ -1,0 +1,24 @@
+{
+  "fountain.make": {
+    "category": "neutral",
+    "max_distance": 64.0,
+    "sounds": [
+      {
+        "name": "sounds/fountain/make",
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "吓哭了"
+  },
+  "fountain.target": {
+    "category": "neutral",
+    "max_distance": 64.0,
+    "sounds": [
+      {
+        "name": "sounds/fountain/target",
+        "volume": 0.5
+      }
+    ],
+    "subtitle": "吓哭了"
+  }
+}

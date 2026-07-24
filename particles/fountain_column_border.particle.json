@@ -1,0 +1,51 @@
+{
+    "format_version": "1.10.0",
+    "particle_effect": {
+        "description": {
+            "identifier": "particle:fountain_column_border",
+            "basic_render_parameters": {
+                "material": "particles_alpha",
+                "texture": "textures/particles/fountain_column_border"
+            }
+        },
+        "components": {
+            "minecraft:emitter_rate_instant": {
+                "num_particles": 1
+            },
+            "minecraft:emitter_lifetime_once": {
+                "active_time": 1
+            },
+            "minecraft:emitter_shape_point": {},
+            "minecraft:particle_lifetime_expression": {
+                "max_lifetime": 6.5417
+            },
+            "minecraft:particle_appearance_billboard": {
+                "size": [
+                    "variable.base = 0.8;variable.t = v.particle_age;variable.w = 0;variable.h = 0;variable.t < 0.375 ? (variable.t < 0.0833 ? (variable.p = variable.t / 0.0833;variable.w = 1.9 + 4.1 * variable.p;variable.h = 0.05 + 0.15 * variable.p) : (variable.t < 0.2083 ? (variable.p = (variable.t - 0.0833) / 0.125;variable.w = 6.0 - 5.0 * variable.p;variable.h = 0.2 + 0.3 * variable.p) : (variable.p = (variable.t - 0.2083) / 0.1667;variable.w = 1.0 + 5.0 * variable.p;variable.h = 0.5 + 13.5 * variable.p))) : (variable.t < 6.125 ? (variable.st_t = variable.t - 0.375;variable.osc = -0.5 * math.cos(variable.st_t * 2880) - 0.3 * math.cos(variable.st_t * 4752) - 0.2 * math.cos(variable.st_t * 7776);variable.w = 7.0 + variable.osc;variable.h = 14.5 + variable.osc * 0.5) : (variable.p = (variable.t - 6.125) / 0.4167;variable.w = 7.0 * (1.0 - variable.p);variable.h = 15.0));return variable.w * variable.base;",
+                    "return variable.h * variable.base * 2;"
+                ],
+                "facing_camera_mode": "lookat_y",
+                "uv": {
+                    "texture_width": 100,
+                    "texture_height": 266,
+                    "uv": [
+                        0,
+                        0
+                    ],
+                    "uv_size": [
+                        100,
+                        266
+                    ]
+                }
+            },
+            "minecraft:particle_appearance_tinting": {
+                "color": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        }
+    }
+}

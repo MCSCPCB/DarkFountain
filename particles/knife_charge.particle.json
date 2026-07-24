@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "particle:knife_charge",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particles/knife_charge"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 100,
+				"max_particles": 30
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1.5
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": ["variable.progress = v.emitter_age / 1.5;variable.d = 2.0 * (1.0 - variable.progress*2);return variable.d * (v.particle_random_1 < 0.5 ? 1.0 : -1.0);", "variable.progress = v.emitter_age / 1.0;variable.wave = math.cos(variable.progress * 1080);return math.round(variable.wave * 2) / 10.0;", "variable.progress = v.emitter_age / 1.5;variable.d = 2.0 * (1.0 - variable.progress*2);return variable.d * (v.particle_random_2 < 0.5 ? 1.0 : -1.0);"]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 0.4
+			},
+			"minecraft:particle_initial_speed": 2,
+			"minecraft:particle_motion_dynamic": {},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["0.3 * (1.0 - (0))", "0.3 * (1.0 - (0))"],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 32,
+					"flipbook": {
+						"base_UV": [0, 0],
+						"size_UV": [16, 16],
+						"step_UV": [0, 16],
+						"max_frame": 2,
+						"stretch_to_lifetime": true
+					}
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": [1, 1, 1, "1.0 - (v.particle_age / v.particle_lifetime)"]
+			}
+		}
+	}
+}

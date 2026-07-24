@@ -1,0 +1,51 @@
+{
+    "format_version": "1.10.0",
+    "particle_effect": {
+        "description": {
+            "identifier": "particle:fountain_column_extension_border",
+            "basic_render_parameters": {
+                "material": "particles_alpha",
+                "texture": "textures/particles/fountain_column_extension_border"
+            }
+        },
+        "components": {
+            "minecraft:emitter_rate_instant": {
+                "num_particles": 1
+            },
+            "minecraft:emitter_lifetime_once": {
+                "active_time": 1
+            },
+            "minecraft:emitter_shape_point": {},
+            "minecraft:particle_lifetime_expression": {
+                "max_lifetime": 6.5417
+            },
+            "minecraft:particle_appearance_billboard": {
+                "size": [
+                    "variable.base = 0.8;variable.t = v.particle_age;variable.w = 0;variable.t < 0.375 ? (variable.w = 0;) : (variable.t < 6.125 ? (variable.st_t = variable.t - 0.375;variable.osc = -0.5 * math.cos(variable.st_t * 2880) - 0.3 * math.cos(variable.st_t * 4752) - 0.2 * math.cos(variable.st_t * 7776);variable.w = 7.0 + variable.osc;) : (variable.p = (variable.t - 6.125) / 0.4167;variable.w = 7.0 * (1.0 - variable.p);));return variable.w * variable.base;",
+                    "variable.base = 0.8;variable.h = 9999;return variable.h * variable.base;"
+                ],
+                "facing_camera_mode": "lookat_y",
+                "uv": {
+                    "texture_width": 100,
+                    "texture_height": 133,
+                    "uv": [
+                        0,
+                        0
+                    ],
+                    "uv_size": [
+                        100,
+                        133
+                    ]
+                }
+            },
+            "minecraft:particle_appearance_tinting": {
+                "color": [
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            }
+        }
+    }
+}

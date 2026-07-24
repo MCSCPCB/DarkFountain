@@ -1,0 +1,68 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.fountain.fountain_make": {
+			"animation_length": 16.5417,
+			"sound_effects": {
+				"0.0": {
+					"effect": "fountain.target"
+				},
+				"0.1": {
+					"effect": "fountain.target"
+				},
+				"0.2": {
+					"effect": "fountain.target"
+				},
+				"0.3": {
+					"effect": "fountain.target"
+				},
+				"0.4": {
+					"effect": "fountain.target"
+				},
+				"0.5": {
+					"effect": "fountain.target"
+				},
+				"0.6": {
+					"effect": "fountain.target"
+				},
+				"0.7": {
+					"effect": "fountain.target"
+				},
+				"0.8": {
+					"effect": "fountain.target"
+				},
+				"0.9": {
+					"effect": "fountain.target"
+				},
+				"1.0": {
+					"effect": "fountain.target"
+				},
+				"1.1": {
+					"effect": "fountain.target"
+				},
+				"1.2": {
+					"effect": "fountain.target"
+				},
+				"1.3": {
+					"effect": "fountain.target"
+				},
+				"1.4": {
+					"effect": "fountain.target"
+				},
+				"1.5": {
+					"effect": "fountain.make"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "fountain_target",
+					"locator": "fountain_target"
+				},
+				"1.5": {
+					"effect": "fountain_make",
+					"locator": "fountain_make"
+				}
+			}
+		}
+	}
+}

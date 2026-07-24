@@ -1,0 +1,27 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.fountain": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "fountain_make": "v.sneak_time >= 5"
+                        }
+                    ]
+                },
+                "fountain_make": {
+                    "animations": [
+                        "fountain_make"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(v.sneak_time >= 5)"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
