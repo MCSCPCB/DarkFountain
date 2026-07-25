@@ -1,0 +1,88 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.actions_and_stuff.compatibility.particles": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "blend_transition": 0.08,
+          "blend_via_shortest_path": true,
+          "transitions": [
+            {
+              "wqpxmr": "q.is_sneaking && q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:iron_tier', 'minecraft:is_sword') && q.has_cape"
+            }
+          ]
+        },
+        "wqpxmr": {
+          "on_entry": [
+            "v.gmrxqk = 1;"
+          ],
+          "transitions": [
+            {
+              "default": "!q.is_sneaking || !q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:iron_tier', 'minecraft:is_sword') || !q.has_cape"
+            },
+            {
+              "kzvndt": "v.gmrxqk = v.gmrxqk + 1; return v.gmrxqk >= 5;"
+            }
+          ]
+        },
+        "kzvndt": {
+          "on_entry": [
+            "v.lcbyof = 0;",
+            "v.ujwpnt = 0;",
+            "v.ovdhes = 1;",
+            "v.hqsvma = 0;"
+          ],
+          "animations": [
+            {
+              "bolqkk": "v.lcbyof == 1 ? 1 - Math.hermite_blend(Math.clamp(v.ujwpnt / v.ovdhes, 0, 1)) : v.lcbyof == 2 ? 1 - Math.hermite_blend(Math.clamp(v.hqsvma, 0, 1)) : 1"
+            }
+          ],
+          "particle_effects": [
+            {
+              "effect": "clefrc"
+            }
+          ],
+          "transitions": [
+            {
+              "kzvndt": "v.lcbyof == 0 && (!q.is_sneaking || !q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:iron_tier', 'minecraft:is_sword') || !q.has_cape) && q.state_time < 1.5833 ? { v.lcbyof = 1; v.ujwpnt = 0; v.ovdhes = q.state_time < 0.7083 ? 0.4167 : (q.state_time < 1.2917 ? 0.625 : 0.5833); }; return 0;"
+            },
+            {
+              "kzvndt": "v.lcbyof == 0 && (!q.is_sneaking || !q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:iron_tier', 'minecraft:is_sword') || !q.has_cape) && q.state_time >= 1.5833 && q.state_time < 8.0417 ? { v.lcbyof = 2; v.hqsvma = 0; }; return 0;"
+            },
+            {
+              "kzvndt": "v.lcbyof == 0 && q.state_time >= 8.0417 ? { v.lcbyof = 2; v.hqsvma = 0; }; return 0;"
+            },
+            {
+              "kzvndt": "v.lcbyof == 1 ? { v.ujwpnt = v.ujwpnt + q.delta_time; }; v.lcbyof == 2 ? { v.hqsvma = v.hqsvma + q.delta_time; }; return 0;"
+            },
+            {
+              "default": "v.lcbyof == 1 && v.ujwpnt >= v.ovdhes + 0.05"
+            },
+            {
+              "default": "v.lcbyof == 2 && v.hqsvma >= 1.05 && (!q.is_sneaking || !q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:iron_tier', 'minecraft:is_sword') || !q.has_cape)"
+            },
+            {
+              "yfhtlc": "v.lcbyof == 2 && v.hqsvma >= 1.05"
+            },
+            {
+              "default": "v.lcbyof == 0 && q.state_time >= 9.0917 && (!q.is_sneaking || !q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:iron_tier', 'minecraft:is_sword') || !q.has_cape)"
+            },
+            {
+              "yfhtlc": "v.lcbyof == 0 && q.state_time >= 9.0917"
+            }
+          ]
+        },
+        "yfhtlc": {
+          "blend_transition": 0.08,
+          "blend_via_shortest_path": true,
+          "transitions": [
+            {
+              "default": "!q.is_sneaking || !q.equipped_item_all_tags('slot.weapon.mainhand', 'minecraft:iron_tier', 'minecraft:is_sword') || !q.has_cape"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

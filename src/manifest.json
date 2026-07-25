@@ -1,32 +1,34 @@
 {
-    "format_version": 2,
-    "metadata": {
-		"author": "MINECRAFT-SCPCB"
-	},
+    "format_version": 3,
     "header": {
         "description": "* 不要再创造喷泉了！！！",
         "name": "黑暗喷泉",
         "uuid": "9fcb659a-39c4-4643-a4ba-0cf2c081441f",
-        "version": [
-            0,
-            0,
-            1
-        ],
-        "min_engine_version": [
-            1,
-            26,
-            0
-        ]
+        "version": "0.0.1",
+        "min_engine_version": "1.26.0"
     },
     "modules": [
         {
             "type": "resources",
             "uuid": "9c04f017-6e22-46e0-8ffb-a15b933e9687",
-            "version": [
-                0,
-                0,
-                1
-            ]
+            "version": "0.0.1"
         }
-    ]
+    ],
+    "subpacks": [
+        {
+            "folder_name": "actions_and_stuff_1_11",
+            "memory_performance_tier": 0,
+            "name": "兼容 Actions & Stuff 1.11 §8请将本包置于 Actions & Stuff 之上"
+        },
+        {
+            "folder_name": "default",
+            "memory_performance_tier": 0,
+            "name": "默认"
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "MINECRAFT-SCPCB"
+        ]
+    }
 }
