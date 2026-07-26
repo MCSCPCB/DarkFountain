@@ -33,7 +33,7 @@
         "sequence": [
           {
             "particle_effect": {
-              "effect": "particle:fountain_column",
+              "effect": "oreville_ans:ydrqmz",
               "type": "emitter"
             }
           },
@@ -51,6 +51,9 @@
       },
       "minecraft:emitter_lifetime_once": {
         "active_time": 1.51
+      },
+      "minecraft:emitter_local_space": {
+        "position": true
       },
       "minecraft:emitter_shape_point": {
         "offset": [
