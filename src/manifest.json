@@ -3,15 +3,15 @@
     "header": {
         "description": "* 不要再创造喷泉了！！！",
         "name": "黑暗喷泉",
-        "uuid": "9fcb659a-39c4-4643-a4ba-0cf2c081441f",
-        "version": "0.0.1",
+        "uuid": "5882cb49-c596-43aa-88a4-d3f33439a9bd",
+        "version": "0.0.5",
         "min_engine_version": "1.26.0"
     },
     "modules": [
         {
             "type": "resources",
-            "uuid": "9c04f017-6e22-46e0-8ffb-a15b933e9687",
-            "version": "0.0.1"
+            "uuid": "8ed45626-01df-4030-a297-2d7f54e57032",
+            "version": "0.0.5"
         }
     ],
     "subpacks": [
